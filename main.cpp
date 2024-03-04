@@ -15,14 +15,13 @@ int main() {
 	cout << "b: " << b << endl;
 	cout << "c: " << c << endl;
 
-	cCpp = a + b + (2*c);
+	cCpp = a - ( b + c);
 	
 	__asm {
 		mov eax, a
-		add eax, b
-		mov ebx, c
+		mov ebx, b
 		add ebx, c
-		add eax, ebx 
+		sub eax, ebx
 		mov cAsm, eax
 	}
 
